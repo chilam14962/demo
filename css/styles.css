@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+
+.menu {
+  width: 100%;
+  min-height: 50px;
+  background-color: orangered;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+}
+.root .menu-item {
+  position: relative;
+  display: inline-block;
+}
+.root .menu-item > a {
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  font-size: larger;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+}
+.root .menu-item:hover > a {
+  color: yellow;
+}
+
+.menu-item .menu-con {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 500px;
+
+  background: linen;
+  border: 1px solid black;
+  /* box-shadow: 0 0 5px gray; */
+
+  transition: 0.2s;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+}
+.menu-item:hover .menu-con {
+  transform: scaleY(1);
+  transition: 0.2s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-con li {
+  display: block;
+}
+.menu-con a {
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 5px;
+
+  font-size: larger;
+  line-height: 30px;
+  font-variant: small-caps;
+  color: orangered;
+}
+.menu-con li:hover a {
+  color: white;
+  background-color: orangered;
+}
